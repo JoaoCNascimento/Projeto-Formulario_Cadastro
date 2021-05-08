@@ -12,7 +12,7 @@
 
 /* Form Title*/
 body {
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(247, 247, 247);
 }
 
 h2 {
@@ -49,6 +49,7 @@ form {
     margin-top: 20px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    box-shadow: 0 0 1em #CCC;
 
 }
 
