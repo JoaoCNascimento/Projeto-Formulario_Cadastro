@@ -7,9 +7,7 @@ checkbox.addEventListener('change', () => {
 
     if (checkbox.checked) {
         button.disabled = false;
-    }
-    
-    else {
+    } else {
         button.disabled = true;
     }
 
@@ -17,5 +15,5 @@ checkbox.addEventListener('change', () => {
 
 button.addEventListener('click', (e) => {
     e.preventDefault();
+    validarFormulario();
 })
-

@@ -225,6 +225,10 @@ button:disabled {
     background-color: var(--quartenary);
 }
 
+button:disabled:hover {
+    background-color: var(--quartenary);
+}
+
 button:hover {
     background-color: #DB324D;
 }
