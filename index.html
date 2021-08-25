@@ -10,143 +10,108 @@
 </head>
 
 <body>
-
     <!-- Main Container -->
     <div id="main-container">
-        <form action="" method="">
-            <h2>Preencha o formulário para realizar o seu cadastro</h2>
-            <!-- Left box start -->
-            <div class="formContent">
-                <div class="formbox">
+        <!--         <div class="content-block">
+            <img src="./img/Sunflower.png" alt="">
+        </div> -->
 
-                    <div class="fullbox">
+        <form>
+            <h2>Formulário de cadastro</h2>
 
-                        <label>Nome</label>
-                        <input type="text" name="nome" placeholder="Digite o seu nome">
+            <h3>Dados pessoais</h3>
 
-                    </div>
+            <div class="fullbox">
+                <label for="name">Nome</label>
+                <input type="text" name="name" placeholder="Digite seu nome">
+            </div>
+            <div class="fullbox">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Digite seu email">
+            </div>
+            <div class="fullbox">
+                <label for="email-confirm">Confirmar email</label>
+                <input type="email" name="email-confirm" placeholder="Digite novamente seu email">
+            </div>
 
-                    <div class="fullbox">
-
-                        <label>Email</label>
-                        <input type="email" name="email" placeholder="Digite seu email">
-
-                    </div>
-
-                    <div class="doublebox">
-                        <div class="halfbox">
-                            <label>CPF</label>
-                            <input type="text" name="CPF" placeholder="XXX.XXX.XXX-XX">
-                        </div>
-
-                        <div class="halfbox">
-                            <label>RG</label>
-                            <input type="text" name="RG" placeholder="XX.XXX.XXX-X">
-                        </div>
-                    </div>
-
-                    <div class="doublebox">
-                        <div class="halfbox">
-                            <label>Data de nascimento</label>
-                            <input type="date">
-                        </div>
-
-                        <div class="halfbox">
-
-                            <label for="sexo">Sexo</label>
-                            <select name="sexo" id="sexo">
-
-                                <option value="M">Masculino</option>
-                                <option value="F">Feminino</option>
-
-                            </select>
-                        </div>
-                    </div>
-
-
-
-                    <div class="halfbox">
-                        <label>Telefone</label>
-                        <input type="text" name="telefone" id="telefone" placeholder="DDD XXXXX-XXXX">
-                    </div>
-
+            <div class="halfbox-container">
+                <div class="halfbox">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password" placeholder="Digite sua senha">
                 </div>
-                <!-- Left box ending -->
-
-                <!--Right box -->
-
-                <div class="formbox">
-
-                    <div class="doublebox">
-
-                        <div class="halfbox">
-                            <label>CEP</label>
-                            <input type="text" name="cep" id="cep" placeholder="XX.XXX-XXX">
-                        </div>
-
-                    </div>
-
-                    <div class="fullbox">
-                        <label>Endereço</label>
-                        <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço">
-                    </div>
-
-
-                    <div class="doublebox">
-                        <div class="halfbox">
-                            <label>Numero</label>
-                            <input type="text" name="numero" id="numero" placeholder="Número da casa">
-                        </div>
-
-                        <div class="halfbox">
-                            <label>Bairro</label>
-                            <input type="text" name="bairro" id="bairro" placeholder="Digite seu bairro">
-                        </div>
-                    </div>
-
-                    <div class="doublebox">
-                        <div class="halfbox">
-                            <label>Cidade</label>
-                            <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade">
-                        </div>
-
-                        <div class="halfbox">
-                            <label>Estado</label>
-                            <input type="text" name="estado" id="estado" placeholder="Digite seu estado">
-                        </div>
-                    </div>
-
-                    <div class="doublebox">
-                        <div class="halfbox">
-
-                            <label>Senha</label>
-                            <input type="password" name="Senha" id="senha" placeholder="Digite sua senha">
-
-                        </div>
-
-                        <div class="halfbox">
-
-                            <label>Confirmar senha</label>
-                            <input type="password" name="Senha" id="confirmarSenha" placeholder="Confirme sua senha">
-
-                        </div>
-                    </div>
-
+                <div class="halfbox">
+                    <label for="password-confirm">Confirmação de senha</label>
+                    <input type="password" name="password-confirm" id="password-confirm"
+                        placeholder="Digite novamente sua senha">
                 </div>
             </div>
-            <!-- Right box ending-->
 
-            <center>
-                <input type="checkbox" name="agreement" id="agreement-checkbox">
-                <label>Eu li e concordo com os <a href="" id="agreement-link">termos de uso.</a></label>
-                <br>
-                <br>
-                <button type="submit" id="btn-register" disabled>Registrar</button>
-            </center>
+            <div class="halfbox-container">
+                <div class="halfbox">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="XXX.XXX.XXX-XX">
+                </div>
+                <div class="halfbox">
+                    <label for="rg">RG</label>
+                    <input type="text" name="rg" id="rg" placeholder="XX.XXX.XXX-X">
+                </div>
+            </div>
+
+            <h3>Endereço</h3>
+
+            <div class="halfbox-container">
+                <div class="halfbox">
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" placeholder="XX.XXX-XXX" maxlength="10">
+                </div>
+            </div>
+
+            <div class="fullbox">
+                <label for="rua">Rua</label>
+                <input type="text" name="endereco" id="endereco" placeholder="Digite o nome da sua rua">
+            </div>
+
+            <div class="halfbox-container">
+                <div class="halfbox">
+                    <label for="number">Número | Apartamento</label>
+                    <input type="text" name="numero" id="numero" placeholder="Número da casa ou apartamento">
+                </div>
+                <div class="halfbox">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro" placeholder="Digite o nome do seu bairro">
+                </div>
+            </div>
+
+            <div class="halfbox-container">
+                <div class="halfbox">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Digite o nome da cidade">
+                </div>
+
+                <div class="halfbox">
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" placeholder="Digite o nome do estado.">
+                </div>
+            </div>
+
+            <label for="agreement-checkbox">
+                <input type="checkbox" name="" id="agreement-checkbox">
+                Eu li e concordo com os <a href="">termos de uso</a> e com a <a href="">política de privacidade</a>.
+            </label>
+
+            <button id="btn-register">Registrar-se</button>
         </form>
-    </div>
 
-    <!-- Main container ending -->
+        <div class="modal-background">
+            <div class="modal">
+                <div class="message-content">
+                    <img src="./img/error.png" alt="icone de erro" width="50" height="50" draggable="false">
+                    <p class="message"></p>
+                </div>
+                <span class="close" onselect="return false">&times</span>
+            </div>
+        </div>
+    </div>
 
     <footer>
 
@@ -157,9 +122,7 @@
     </footer>
 
     <script src="js/button.js"></script>
-    <script src="js/cepValidation.js"></script>
-    <script src="js/formDataToJSON.js"></script>
-
+    <script src="js/validarCep.js"></script>
 </body>
 
 </html>

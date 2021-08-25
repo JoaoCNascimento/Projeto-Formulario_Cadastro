@@ -1,325 +1,270 @@
-/* font-family and default css reset */
-
+/* font family and default css*/
 * {
-
     padding: 0;
     margin: 0;
-    font-family: Segoe UI, Helvetica, sans-serif;
+    font-family: 'Segoe UI', sans-serif, Verdana;
     box-sizing: border-box;
-    font-size: 1rem;
-
 }
 
-/* Form Title*/
+:root {
+    --primary: #A62639;
+    --secondary: #DB324D;
+    --tertiary: #56494E;
+    --quartenary: #A29C9B;
+    --quintenary: #511C29;
+}
+
+::selection {
+    background-color: var(--tertiary);
+    color: white
+}
+
+html,
 body {
-    background-color: rgb(247, 247, 247);
+    height: 100%;
 }
 
-h2 {
-
-    background-color: rgb(0, 162, 255);
-    padding: 20px;
-    color: white;
-    width: 100%;
-    text-align: center;
-    font-family:  sans-serif;
-    font-size: 1.8rem;
-    font-weight: 560;
-    margin: auto;
-}
-
-/* Cotainer divs */
-
-#main-container {
-
+body {
     display: flex;
     flex-direction: column;
-    align-self: center;
-    position: relative;
+    background-color: var(--quintenary);
+    background-size: 100%;
+    height: auto;
 
+}
+
+#main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto auto;
+    width: 100%;
+}
+
+.content-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+}
+
+.content-block img {
+    width: 400px;
+    margin: auto;
 }
 
 form {
-    
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    justify-content: space-between;
     background-color: white;
-    width: 1000px;
+    padding: 50px 20px 20px;
+    border-radius: 15px;
+}
+
+h2 {
+    padding: 15px;
+    margin: -80px auto 15px;
+    align-self: center;
+    background-color: #56494E;
+    width: 500px;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Gotham";
+    position: absolute;
+    color: white;
+}
+
+h3 {
+    padding: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+    font-family: "Gotham";
+    background-color: #ff2655;
+    font-weight: 500;
+}
+
+form a {
+    color: #ff2655;
+    text-decoration: none;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+.fullbox,
+.halfbox,
+.halfbox-container {
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 20px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    box-shadow: 0 0 1em #CCC;
-
-}
-
-.formContent {
-
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: auto;
-    align-items: center;
-}
-
-.formbox {
-
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-
-}
-
-/* Form components and divs*/
-
-label {
-
-    font-weight: 520;
-
-}
-
-input {
-
-    background-color: transparent;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid rgba(100, 100, 100, 0.37);
-    transition: 0.25s
-}
-
-input:hover {
-
-    border-color: rgba(100, 100, 100, 0.829);
-
-}
-
-input:focus {
-
-    border-color: rgb(0, 162, 255);
-
 }
 
 .fullbox {
-
-    margin: 20px 10px;
+    flex-direction: column;
     width: 100%;
-
 }
 
-.fullbox input {
-
-    padding: 5px;
-    width: 95%;
-
-}
-
-
-.doublebox {
-
-    display: flex;
+.halfbox-container {
     flex-direction: row;
-    width: 100%;
-
+    justify-content: space-between;
 }
 
 .halfbox {
-
-    margin: 20px 10px;
-    display: flex;
     flex-direction: column;
-    width: 50%;
-    justify-content: space-around;
-
+    align-content: center;
+    width: 49%;
 }
 
-.halfbox input {
-
-    padding: 5px;
-    width: 100%;
-
-}
-
-.halfbox select {
-
-    width: 90%;
-    height: 100%
-
-}
-
-/* agreement checkbox*/
-
-a {
-
-    color: rgb(0, 162, 255);
-    text-decoration: none;
-
-}
-
-a:hover {
-
-    color: rgb(2, 112, 175);
-    text-decoration: underline;
-
-}
-
-/* register button */
-
-#btn-register {
-
-    width: 250px;
-    height: 70px;
-    padding: 10px;  
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: rgb(25, 163, 255);
-    border: none;
-    border-radius: 3px;
-    font-size: 30px;
-    color: white;
+label {
     font-weight: bold;
-    transition: 0.3s;
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+input {
+    padding: 5px;
     margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 0.90rem;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+.modal-background {
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 99999;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    width: 400px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.message-content {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: "gotham";
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.message-content img {
+    margin-right: 15px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -8px;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
-
 }
 
-#btn-register:hover {
-
-    
-    background-color: rgba(25, 163, 255, 0.76);
-    -webkit-transform: scale(1.1);
-    transform: scale(0.5.1);
-    transition: 0.3s;
- 
-
+button {
+    background-color: #ff2655;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 10px;
+    transition: 0.15s;
 }
 
-#btn-register:focus {
-
-    background-color: rgba(0, 117, 196, 0.733);
-
-
-}
-
-#btn-register:disabled {
-
-    background-color: rgb(114, 114, 114);
-    cursor: default;
-
-}
-
-#btn-register:disabled:hover {
-
-    background-color: rgb(70, 70, 70);
-    -webkit-transform: none;
-    transform: none;
-
+button:disabled {
+    background-color: var(--quartenary);
 }
 
 footer {
-
-    width: 100%;
-    margin: 20px auto 0px;
-    padding-top: 10%;
-
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: white;
 }
 
-small {
-
-    margin-bottom: 20px;
-    text-align: center;
-    color: rgb(71, 71, 71);
-    font-size: 15px;
-
-}
-
-/* Ajuste de layout */
-
-@media screen and (max-width: 1000px) {
-
-    form {
-
-        margin-top: 0px;
-        width: 90%;
-        flex-direction: column;
-
-    }
-
-    .formContent {
-
-        flex-direction: column;
-
-    }
-    
-    .formbox {
-
-        width: 70%;
-
-    }
-
-}
-
-@media screen and (max-width: 700px) {
-
+@media screen and (max-width: 1300px) {
     #main-container {
-
         flex-direction: column;
-
+        align-items: center;
     }
 
-    form {
-
-        width: 100%;
-        flex-direction: column;
-
-    }
-
-    .formContent {
-
-        width: 100%;
-        flex-direction: column;
-
-    }
-
-    .formbox {
-
-        width: 75%;
-
-    }
-
-    .halfbox {
-
-        width: 50%;
-
-    }
-    
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
 
-    .fullbox {
-
-        width: 100%;
-
+    .modal {
+        width: 85%;
     }
 
-    .formContent {
-
-        flex-direction: column;
-
+    form h2 {
+        font-size: 5vw;
     }
 
-    .doublebox {
+}
 
+@media screen and (max-width: 680px) {
+    form {
+        width: 90%
+    }
+
+    form h2 {
+        width: 75%;
+    }
+
+    .halfbox-container {
         flex-direction: column;
-
     }
 
     .halfbox {
-
         width: 100%;
-
     }
-    
 }

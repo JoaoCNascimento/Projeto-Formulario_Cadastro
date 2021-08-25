@@ -6,27 +6,16 @@ checkbox.checked = false;
 checkbox.addEventListener('change', () => {
 
     if (checkbox.checked) {
-
         button.disabled = false;
-
     }
+    
     else {
-
         button.disabled = true;
-
     }
 
 })
 
-var Usuario = {
-
-    nome: "nome"
-
-}
-
 button.addEventListener('click', (e) => {
-
     e.preventDefault();
-
 })
 
